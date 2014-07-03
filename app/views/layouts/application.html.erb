@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
@@ -11,7 +11,7 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
+          <%= link_to "sample app", '#', id: "logo", class: 'brand' %>
           <nav>
             <ul class="nav pull-right">
               <li><%= link_to "Home",    root_path %></li>
