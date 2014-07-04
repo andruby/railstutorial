@@ -1,0 +1,5 @@
+<h1>Microposts</h1>
+<% @microposts.each do |micropost| %>
+<%= render partial: 'show', locals: {micropost: micropost} %>
+<hr>
+<% end %>

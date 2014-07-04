@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :microposts, only: [:index, :new, :show, :create]
+
   get 'users/new'
 
-  root 'static_pages#home'
+  root 'microposts#index'
   get '/help' => 'static_pages#help'
   get '/about' => 'static_pages#about'
 
